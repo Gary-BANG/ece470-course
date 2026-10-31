@@ -1,0 +1,561 @@
+{
+  "groups": [
+    "数学：运动的语言",
+    "机器人与自由度",
+    "坐标系与旋转",
+    "旋转如何随时间变化",
+    "位姿与螺旋运动",
+    "正向运动学",
+    "Jacobian 与奇异性",
+    "逆向运动学",
+    "闭链与并联机器人",
+    "动力学：能量与惯量",
+    "递归动力学与应用",
+    "路径与轨迹"
+  ],
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "矩阵、线性映射、秩与零空间",
+      "group": 0,
+      "question": "矩阵的每一列，究竟在描述什么？",
+      "sources": [
+        "Midterm 1 · 01",
+        "Midterm 1 · 02",
+        "Midterm 2 · 01（复习合并）"
+      ],
+      "minutes": 8
+    },
+    {
+      "id": "l02",
+      "title": "特征值、正交与正定矩阵",
+      "group": 0,
+      "question": "哪些矩阵保长度，哪些矩阵描述能量？",
+      "sources": [
+        "Midterm 1 · 03",
+        "Midterm 1 · 05"
+      ],
+      "minutes": 6
+    },
+    {
+      "id": "l03",
+      "title": "伪逆、最小范数与最小二乘",
+      "group": 0,
+      "question": "方程无解或有很多解时，应该选哪个？",
+      "sources": [
+        "Midterm 1 · 04"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l04",
+      "title": "构型空间、自由度与约束",
+      "group": 1,
+      "question": "关节角和末端位置，是同一种坐标吗？",
+      "sources": [
+        "Midterm 1 · 06",
+        "Midterm 1 · 07"
+      ],
+      "minutes": 6
+    },
+    {
+      "id": "l05",
+      "title": "关节、Grübler 公式与机构计数",
+      "group": 1,
+      "question": "为什么数电机不一定能数出自由度？",
+      "sources": [
+        "Midterm 1 · 08"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l06",
+      "title": "平面坐标系、旋转与 SE(2)",
+      "group": 2,
+      "question": "同一个点换一套坐标，数字如何改变？",
+      "sources": [
+        "Midterm 1 · 09",
+        "Midterm 1 · 10"
+      ],
+      "minutes": 6
+    },
+    {
+      "id": "l07",
+      "title": "SO(3)、读图与基本轴旋转",
+      "group": 2,
+      "question": "为什么三维旋转需要九个数，却只有三个自由度？",
+      "sources": [
+        "Midterm 1 · 11"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l08",
+      "title": "主动旋转、被动换坐标与左乘右乘",
+      "group": 2,
+      "question": "先绕哪根轴，为什么会改变结果？",
+      "sources": [
+        "Midterm 1 · 12"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l09",
+      "title": "叉积、so(3) 与 hat/vee 映射",
+      "group": 3,
+      "question": "为什么叉积可以写成矩阵乘法？",
+      "sources": [
+        "Midterm 1 · 13"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l10",
+      "title": "角速度、旋转矩阵导数与两种参考系",
+      "group": 3,
+      "question": "旋转矩阵的导数，如何变成角速度？",
+      "sources": [
+        "Midterm 1 · 14"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l11",
+      "title": "矩阵指数、指数坐标与 Rodrigues 公式",
+      "group": 3,
+      "question": "怎样把瞬时转动积累成有限旋转？",
+      "sources": [
+        "Midterm 1 · 15",
+        "Midterm 2 · 02（复习合并）"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l12",
+      "title": "SO(3) 对数、零角与半周退化情况",
+      "group": 3,
+      "question": "从姿态矩阵，如何找回旋转轴和角度？",
+      "sources": [
+        "Midterm 1 · 16",
+        "Midterm 2 · 02（复习合并）"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l13",
+      "title": "姿态误差、插值与陀螺仪积分",
+      "group": 3,
+      "question": "两种姿态之间，什么叫平滑地转过去？",
+      "sources": [
+        "Midterm 1 · 17"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l14",
+      "title": "SE(3)、坐标链与旋转平移顺序",
+      "group": 4,
+      "question": "旋转和平移怎样合并成一个运算？",
+      "sources": [
+        "Midterm 1 · 18",
+        "Midterm 2 · 03（复习合并）"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l15",
+      "title": "Twist、se(3) 与刚体上点的速度",
+      "group": 4,
+      "question": "六维速度中的 v，到底是谁的速度？",
+      "sources": [
+        "Midterm 1 · 19"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l16",
+      "title": "Adjoint：twist 的参考系变换",
+      "group": 4,
+      "question": "为什么 twist 换系不能只旋转两次？",
+      "sources": [
+        "Midterm 1 · 20",
+        "Midterm 2 · 04（复习合并）"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l17",
+      "title": "从旋转极点到螺旋轴",
+      "group": 4,
+      "question": "旋转与平移为什么可以归结到一根螺旋轴？",
+      "sources": [
+        "Midterm 1 · 21",
+        "Midterm 1 · 22"
+      ],
+      "minutes": 7
+    },
+    {
+      "id": "l18",
+      "title": "SE(3) 指数、对数与位姿插值",
+      "group": 4,
+      "question": "沿螺旋轴走一段，会到达哪里？",
+      "sources": [
+        "Midterm 1 · 23",
+        "Midterm 1 · 24",
+        "Midterm 2 · 03（复习合并）"
+      ],
+      "minutes": 7
+    },
+    {
+      "id": "l19",
+      "title": "Wrench、力矩、功率与对偶变换",
+      "group": 4,
+      "question": "力和速度换参考系，为什么公式不同？",
+      "sources": [
+        "Midterm 1 · 25",
+        "Midterm 2 · 04（复习合并）"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l20",
+      "title": "正向运动学与 Space PoE",
+      "group": 5,
+      "question": "每个关节的运动，怎样累积到末端？",
+      "sources": [
+        "Midterm 1 · 26",
+        "Midterm 1 · 27"
+      ],
+      "minutes": 7
+    },
+    {
+      "id": "l21",
+      "title": "混合关节与 Body PoE",
+      "group": 5,
+      "question": "同一机械臂用 body 和 space 表达会不同吗？",
+      "sources": [
+        "Midterm 1 · 28",
+        "Midterm 1 · 29",
+        "Midterm 2 · 05（复习合并）"
+      ],
+      "minutes": 6
+    },
+    {
+      "id": "l22",
+      "title": "DH 建系与 DH → PoE",
+      "group": 5,
+      "question": "DH 的四个参数怎样编码相邻连杆关系？",
+      "sources": [
+        "Midterm 1 · 30",
+        "Midterm 1 · 31",
+        "Midterm 2 · 06（复习合并）"
+      ],
+      "minutes": 8
+    },
+    {
+      "id": "l23",
+      "title": "解析 Jacobian、点速度与平面 2R",
+      "group": 6,
+      "question": "只动一个关节，末端瞬间往哪里走？",
+      "sources": [
+        "Midterm 2 · 07"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l24",
+      "title": "Space / Body Jacobian",
+      "group": 6,
+      "question": "如何不对整个位姿矩阵逐项求导就得到 Jacobian？",
+      "sources": [
+        "Midterm 2 · 08",
+        "Midterm 2 · 09"
+      ],
+      "minutes": 7
+    },
+    {
+      "id": "l25",
+      "title": "静力学、虚功与可平衡的力矩",
+      "group": 6,
+      "question": "末端受力，为什么要用 Jacobian 的转置？",
+      "sources": [
+        "Midterm 2 · 10"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l26",
+      "title": "奇异性、秩、零空间与几何判据",
+      "group": 6,
+      "question": "机器人伸直时，为什么突然失去一个运动方向？",
+      "sources": [
+        "Midterm 2 · 11"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l27",
+      "title": "速度椭球、力椭球与 manipulability",
+      "group": 6,
+      "question": "速度椭球如何显示不同方向上的运动能力？",
+      "sources": [
+        "Midterm 2 · 12"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l28",
+      "title": "平面 2R 解析 IK、工作空间与分支",
+      "group": 7,
+      "question": "一个目标点，为什么能有两种手臂姿态？",
+      "sources": [
+        "Midterm 2 · 13"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l29",
+      "title": "ZYX Euler angles 的正解、反解与 gimbal lock",
+      "group": 7,
+      "question": "Euler angles 为什么会发生万向节锁？",
+      "sources": [
+        "Midterm 2 · 14"
+      ],
+      "minutes": 6
+    },
+    {
+      "id": "l30",
+      "title": "球腕 6R IK：腕心、四组手臂解与八组姿态解",
+      "group": 7,
+      "question": "六个关节的逆解为什么能拆成两部分？",
+      "sources": [
+        "Midterm 2 · 15"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l31",
+      "title": "Newton 迭代与伪逆",
+      "group": 7,
+      "question": "怎样反复修正一个不够准确的关节猜测？",
+      "sources": [
+        "Midterm 2 · 16",
+        "Midterm 2 · 17"
+      ],
+      "minutes": 6
+    },
+    {
+      "id": "l32",
+      "title": "SE(3) 数值 IK：body 误差与双阈值",
+      "group": 7,
+      "question": "SE(3) 上的误差，为什么不能直接相减？",
+      "sources": [
+        "Midterm 2 · 18"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l33",
+      "title": "Damped least squares 与冗余零空间速度",
+      "group": 7,
+      "question": "接近奇异时，怎样避免关节速度爆炸？",
+      "sources": [
+        "Midterm 2 · 19"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l34",
+      "title": "闭链约束、3-RPR 与 Stewart 平台位置学",
+      "group": 8,
+      "question": "闭环让各关节之间增加了什么约束？",
+      "sources": [
+        "Midterm 2 · 20"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l35",
+      "title": "并联平台逆 Jacobian 与支腿力的 wrench 映射",
+      "group": 8,
+      "question": "并联机器人的腿长变化如何决定平台运动？",
+      "sources": [
+        "Midterm 2 · 21"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l36",
+      "title": "五杆机构、被动关节消元与两类奇异",
+      "group": 8,
+      "question": "锁住电机后，机构仍可能动吗？",
+      "sources": [
+        "Midterm 2 · 22"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l37",
+      "title": "Euler–Lagrange、广义力与正逆动力学",
+      "group": 9,
+      "question": "如何从能量推导驱动力矩？",
+      "sources": [
+        "Midterm 2 · 23"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l38",
+      "title": "平面 2R 点质量动力学",
+      "group": 9,
+      "question": "第二根杆为什么会改变第一关节的惯量？",
+      "sources": [
+        "Midterm 2 · 24"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l39",
+      "title": "Centripetal、Coriolis 与旋转坐标的导数",
+      "group": 9,
+      "question": "没有角加速度，为什么仍需要力？",
+      "sources": [
+        "Midterm 2 · 25"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l40",
+      "title": "惯性张量、刚体动能与常见均匀物体",
+      "group": 9,
+      "question": "为什么惯量不是只有一个数？",
+      "sources": [
+        "Midterm 2 · 26"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l41",
+      "title": "平行轴定理与惯性张量换系",
+      "group": 9,
+      "question": "同一物体换一根转轴，惯量如何变化？",
+      "sources": [
+        "Midterm 2 · 27"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l42",
+      "title": "分布质量与通用 COM Jacobian 动力学",
+      "group": 9,
+      "question": "把每根杆的能量相加，怎样得到整机模型？",
+      "sources": [
+        "Midterm 2 · 28",
+        "Midterm 2 · 29"
+      ],
+      "minutes": 8
+    },
+    {
+      "id": "l43",
+      "title": "单刚体 Newton–Euler 与非主轴匀速转动",
+      "group": 10,
+      "question": "恒定角速度为什么仍可能需要力矩？",
+      "sources": [
+        "Midterm 2 · 30"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l44",
+      "title": "ad、六维刚体方程与空间惯量",
+      "group": 10,
+      "question": "如何把线动量和角动量写在同一个方程里？",
+      "sources": [
+        "Midterm 2 · 31",
+        "Midterm 2 · 32"
+      ],
+      "minutes": 6
+    },
+    {
+      "id": "l45",
+      "title": "Recursive Newton–Euler：前向速度/加速度、反向 wrench",
+      "group": 10,
+      "question": "为什么正向算运动、反向算受力？",
+      "sources": [
+        "Midterm 2 · 33"
+      ],
+      "minutes": 7
+    },
+    {
+      "id": "l46",
+      "title": "单连杆受力与正逆动力学",
+      "group": 10,
+      "question": "电机力矩与轴承反力有什么区别？",
+      "sources": [
+        "Midterm 2 · 34",
+        "Midterm 2 · 35"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l47",
+      "title": "Computed torque、重力补偿与碰撞残差",
+      "group": 10,
+      "question": "知道动力学以后，怎样让机器人跟随目标？",
+      "sources": [
+        "Midterm 2 · 36"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l48",
+      "title": "力矩峰值/RMS、载荷模型与惯性参数辨识",
+      "group": 10,
+      "question": "选电机与估计载荷，需要看哪些量？",
+      "sources": [
+        "Midterm 2 · 37"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l49",
+      "title": "Path、trajectory 与关节直线路径",
+      "group": 11,
+      "question": "同一条路径，走快走慢改变了什么？",
+      "sources": [
+        "Midterm 2 · 38"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l50",
+      "title": "SE(3) screw path 与位置/方向解耦路径",
+      "group": 11,
+      "question": "末端走直线与沿螺旋走，如何选择？",
+      "sources": [
+        "Midterm 2 · 39"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l51",
+      "title": "Cubic time scaling、峰值与最短允许时长",
+      "group": 11,
+      "question": "怎样从静止出发，再停在终点？",
+      "sources": [
+        "Midterm 2 · 40"
+      ],
+      "minutes": 5
+    },
+    {
+      "id": "l52",
+      "title": "Quintic time scaling、加速度连续性与峰值",
+      "group": 11,
+      "question": "让端点加速度也为零，需要付出什么代价？",
+      "sources": [
+        "Midterm 2 · 41"
+      ],
+      "minutes": 5
+    }
+  ]
+}
